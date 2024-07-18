@@ -1,9 +1,18 @@
-﻿Console.Clear();
+﻿using Sistema_de_gestion_de_biblioteca.Models;
+
+Console.Clear();
+
+Libro libro = new Libro("Librito", new DateOnly(1990, 10, 03), "Gabito", "Comedia", 25000);
+Biblioteca biblioteca = new Biblioteca();
+biblioteca.libros.Add(libro);
 
 void MostrarLibros()
 {
     Console.Clear();
-    Console.WriteLine(@"Presione cualquier tecla para volver al menú principal.");
+    biblioteca.MostrarLibros();
+    Console.Write(@"
+
+Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
     Main();
 }
@@ -69,3 +78,8 @@ INGRESE OPCIÓN: ");
 }
 
 Main();
+
+
+
+
+
