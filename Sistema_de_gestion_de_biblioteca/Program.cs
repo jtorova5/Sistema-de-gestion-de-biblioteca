@@ -47,6 +47,78 @@ Presione cualquier tecla para volver al menú principal.");
     Main();
 }
 
+void BusquedaGenero()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
+void BusquedaAutor()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
+void BusquedaAños()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
+void DescuentoLibro()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
+void OrdenarLibrosPorAño()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
+void LibroReciente()
+{
+    Console.Clear();
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
+    Console.ReadKey();
+    Console.Clear();
+    Main();
+}
+
 void Salir()
 {
     Console.Clear();
@@ -67,7 +139,13 @@ void Main()
 1. Mostrar libros
 2. Agregar libro
 3. Eliminar libro
-4. Salir
+4. Buscar por genero
+5. Buscar por autor
+6. Buscar por año
+7. Aplicar descuento a un libro
+8. Ordenar libros por rango de años
+9. Saber si un libro es reciente
+10. Salir
 -----------------------------------------------------------------------------------------------
 
 INGRESE OPCIÓN: ");
@@ -93,6 +171,24 @@ INGRESE OPCIÓN: ");
             EliminarLibro();
             break;
         case 4:
+            BusquedaGenero();
+            break;
+        case 5:
+            BusquedaAutor();
+            break;
+        case 6:
+            BusquedaAños();
+            break;
+        case 7:
+            DescuentoLibro();
+            break;
+        case 8:
+            OrdenarLibrosPorAño();
+            break;
+        case 9:
+            LibroReciente();
+            break;
+        case 10:
             Salir();
             break;
         default:
