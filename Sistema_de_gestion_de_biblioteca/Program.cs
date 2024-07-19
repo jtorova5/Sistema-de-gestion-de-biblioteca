@@ -27,8 +27,11 @@ Presione cualquier tecla para volver al menú principal.");
 void AgregarLibro()
 {
     Console.Clear();
-    Console.WriteLine(@"Presione cualquier tecla para volver al menú principal.");
+    biblioteca.AgregarLibro();
+    Console.WriteLine(@"
+Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
+    Console.Clear();
     Main();
 }
 
@@ -89,6 +92,8 @@ INGRESE OPCIÓN: ");
             Salir();
             break;
         default:
+            Console.Clear();
+            Console.WriteLine("Opción inválida. Intente nuevamente.");
             Main();
             break;
     }

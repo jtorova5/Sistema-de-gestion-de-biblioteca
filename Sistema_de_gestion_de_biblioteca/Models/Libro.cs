@@ -21,6 +21,12 @@ public class Libro : Publicacion
         Genero = genero;
         Precio = precio;
     }
+
+    public void AgregarLibro()
+    {
+        
+    }
+    
     
 
 }
