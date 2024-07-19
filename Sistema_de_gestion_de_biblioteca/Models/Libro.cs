@@ -14,7 +14,7 @@ public class Libro : Publicacion
 
     public Libro(string titulo, DateOnly añoPublicacion, string autor, string genero, double precio)
     {
-        Titulo = titulo;
+        Titulo = titulo.ToLower().Trim();
         AñoPublicacion = añoPublicacion;
         Autor = autor;
         ISBN = Guid.NewGuid();
@@ -22,17 +22,5 @@ public class Libro : Publicacion
         Precio = precio;
     }
     
-    public void Descripcionlibro()
-    {
-        Console.WriteLine($@"---------------------------------------------------------------
 
-Título: {Titulo}
-Autor: {Autor}
-Genero: {Genero}
-Año: {AñoPublicacion}
-ISBN: {ISBN}
-Precio: ${Precio}
-
----------------------------------------------------------------");
-    }
 }

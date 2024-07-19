@@ -16,9 +16,11 @@ void MostrarLibros()
 {
     Console.Clear();
     biblioteca.MostrarLibros();
+    biblioteca.Descripcionlibro();
     Console.Write(@"
 Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
+    Console.Clear();
     Main();
 }
 
@@ -60,8 +62,18 @@ void Main()
 3. Eliminar libro
 4. Salir
 -----------------------------------------------------------------------------------------------
+
 INGRESE OPCIÓN: ");
-    byte accion = Convert.ToByte(Console.ReadLine());
+    byte accion;
+    do
+    {
+        if (!byte.TryParse(Console.ReadLine(), out accion))
+        {
+            Console.Clear();
+            Console.WriteLine("Opción inválida. Intente nuevamente.");
+        }
+    } while (!typeof(byte).IsInstanceOfType(accion));
+
     switch (accion)
     {
         case 1:
