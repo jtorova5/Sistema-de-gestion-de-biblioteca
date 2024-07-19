@@ -28,7 +28,7 @@ void AgregarLibro()
 {
     Console.Clear();
     biblioteca.AgregarLibro();
-    Console.WriteLine(@"
+    Console.Write(@"
 Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
     Console.Clear();
@@ -38,8 +38,12 @@ Presione cualquier tecla para volver al menú principal.");
 void EliminarLibro()
 {
     Console.Clear();
-    Console.WriteLine(@"Presione cualquier tecla para volver al menú principal.");
+    biblioteca.MostrarLibros();
+    biblioteca.EliminarLibro();
+    Console.Write(@"
+Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
+    Console.Clear();
     Main();
 }
 
