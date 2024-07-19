@@ -55,7 +55,7 @@ Ingrese el título del libro que desea ver: ");
                 Console.WriteLine($@"
 -----------------------------------------------------------------------------------------------
 
-Título: {libroEncontrado}
+Título: {libroEncontrado.Titulo}
 Autor: {libroEncontrado.Autor}
 Género: {libroEncontrado.Genero}
 Año: {libroEncontrado.AñoPublicacion}
@@ -72,5 +72,26 @@ Precio: ${libroEncontrado.Precio.ToString("#,##0.00")}
         } while (libroEncontrado == null);
     }
 
+    // metodo registrar libro
+    public void AgregarLibro()
+    {
+        Console.Write(@"-----------------------------------------------------------------------------------------------
+                                        AGREGAR LIBRO
+-----------------------------------------------------------------------------------------------
+        
+Título: ");
+        var titulo = Console.ReadLine().ToLower().Trim();
+        Console.Write("Autor: ");
+        var autor = Console.ReadLine().Trim();
+        Console.Write("Año de publicación (YYYY-MM-DD): ");
+        DateOnly añoPublicacion = DateOnly.Parse(Console.ReadLine());
+        Console.Write("Género: ");
+        var genero = Console.ReadLine().Trim();
+        Console.Write("Precio: ");
+        var precio = Convert.ToDouble(Console.ReadLine());
+
+        var nuevoLibro = new Libro(titulo, añoPublicacion, autor, genero, precio);
+        libros.Add(nuevoLibro);
+    }
 
 }
