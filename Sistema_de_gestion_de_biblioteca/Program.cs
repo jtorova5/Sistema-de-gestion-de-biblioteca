@@ -2,16 +2,21 @@
 
 Console.Clear();
 
-Libro libro = new Libro("Librito", new DateOnly(1990, 10, 03), "Gabito", "Comedia", 25000);
+Libro libro = new Libro("100 años de soledad", new DateOnly(1967, 05, 15), "Gabriel García Márquez", "Novela", 68000);
+Libro libro2 = new Libro("Romeo y Julieta", new DateOnly(1597, 06, 15), "William Shakespeare", "Tragedia", 54000);
+Libro libro3 = new Libro("El principito", new DateOnly(1943, 04, 06), "Antoine de Saint-Exupéry", "Fábula", 47500);
+
+
 Biblioteca biblioteca = new Biblioteca();
 biblioteca.libros.Add(libro);
+biblioteca.libros.Add(libro2);
+biblioteca.libros.Add(libro3);
 
 void MostrarLibros()
 {
     Console.Clear();
     biblioteca.MostrarLibros();
     Console.Write(@"
-
 Presione cualquier tecla para volver al menú principal.");
     Console.ReadKey();
     Main();

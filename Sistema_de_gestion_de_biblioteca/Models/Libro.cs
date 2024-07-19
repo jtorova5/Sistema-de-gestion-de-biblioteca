@@ -21,9 +21,7 @@ public class Libro : Publicacion
         Genero = genero;
         Precio = precio;
     }
-
-
-
+    
     public void Descripcionlibro()
     {
         Console.WriteLine($@"---------------------------------------------------------------
